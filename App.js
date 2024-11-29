@@ -1,31 +1,22 @@
- /*
-<div parent>
-<div child1>
-<h1 hello1>
-</div>
-
-<div child 2>
-<h1 hello2>
-</div>
-
-</div>
-
-
-
-
- */
+import React from "react";
+import ReactDOM from "react-dom/client"
  
  
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+const TitleComponent = ()=><h1>Namaste React Course🚀</h1>
+const BodyComponent = ()=>(<div id="body">
+            This is a React course conducted by Akshay Saini which is very popular and good.
+        </div>)
+
+// create a container component
+const ContainerComponent = ()=>(<div id="container">
+        
+        {TitleComponent()}
+        <BodyComponent/>
+    </div>)
+
+
+root.render(<ContainerComponent/>);
  
- //create react root
- const root = ReactDOM.createRoot(document.getElementById("root"));
- //create react h1
-
- const child2 = React.createElement("div", {id:"child2"},["Child 2",React.createElement("h1", {}, "I am an h1 tag under child 2" )])
- const child1 = React.createElement("div", {id:"child1"}, ["Child 1",React.createElement("h1", {}, "I am an h1 tag under child 1")])
- const parent = React.createElement("div", {id:"parent"} ,[child1, child2])
- 
-
-
- //render
- root.render(parent);
