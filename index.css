@@ -42,3 +42,8 @@
     border: 1px solid black;
     cursor: pointer;
 }
+
+.btn-filter{
+    margin:10px;
+}
+
